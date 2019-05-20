@@ -2,6 +2,8 @@ import App from 'next/app';
 import Head from 'next/head';
 import { ApolloProvider } from 'react-apollo';
 
+import client from '../apolloSetup';
+
 class MyApp extends App {
 
   render() {
@@ -14,7 +16,7 @@ class MyApp extends App {
 
         </Head>
         
-        <ApolloProvider client={}>
+        <ApolloProvider client={client}>
           <Component {...pageProps} />
         </ApolloProvider>
       </React.Fragment>
