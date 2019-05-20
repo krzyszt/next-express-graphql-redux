@@ -1,8 +1,12 @@
 import App from 'next/app';
 import Head from 'next/head';
 import { ApolloProvider } from 'react-apollo';
+import { Provider } from 'react-redux';
 
 import client from '../apolloSetup';
+import setupStore from '../reduxSetup';
+
+const store = setupStore();
 
 class MyApp extends App {
 
@@ -11,14 +15,15 @@ class MyApp extends App {
     return (
       <React.Fragment>
         <Head>
-          <title>CUB Hub</title>
+          <title>Next, Express, GraphQL, Redux, RXJS</title>
           <meta charSet="utf-8" />
-
         </Head>
         
-        <ApolloProvider client={client}>
-          <Component {...pageProps} />
-        </ApolloProvider>
+        <Provider store={store}>
+          <ApolloProvider client={client}>
+            <Component {...pageProps} />
+          </ApolloProvider>
+        </Provider>
       </React.Fragment>
     )
   }
