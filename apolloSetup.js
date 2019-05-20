@@ -1,6 +1,6 @@
 import { ApolloClient } from 'apollo-client';
 import { ApolloLink } from 'apollo-link';
-import { HTTPLink } from 'apollo-link-http';
+import { HttpLink } from 'apollo-link-http';
 import { onError } from 'apollo-link-error';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
@@ -16,10 +16,10 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
   }
 });
 
-const httpLink = new HTTPLink({
+const httpLink = new HttpLink({
   uri,
   headers: {
-    
+
   }
 });
 
