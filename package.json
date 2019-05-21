@@ -13,7 +13,12 @@
   "author": "",
   "license": "ISC",
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>src/setupTests.js"]
+    "setupFilesAfterEnv": [
+      "<rootDir>src/setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
@@ -45,6 +50,7 @@
   "devDependencies": {
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.1",
+    "enzyme-to-json": "^3.3.5",
     "jest": "^24.8.0",
     "react-test-renderer": "^16.8.6"
   }
