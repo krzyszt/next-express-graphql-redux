@@ -537,7 +537,7 @@ exports[`Index Page should render as expected 1`] = `
                         <h6
                           className="MuiTypography-root-43 MuiTypography-h6-60 MuiTypography-colorInherit-72 MuiTypography-noWrap-69 Index-toolbarTitle-2"
                         >
-                          My App Testing
+                          My App
                         </h6>
                       </Typography>
                     </WithStyles(Typography)>
