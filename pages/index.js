@@ -7,6 +7,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import InputBasic from '../src/components/InputBasic';
 
 const styles = theme => ({
   appBar: {
@@ -36,6 +37,9 @@ class Index extends React.Component {
             </Button>
           </Toolbar>
         </AppBar>
+        <div>
+          <InputBasic />
+        </div>
       </React.Fragment>
     );
   }
